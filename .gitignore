@@ -13,3 +13,7 @@ server.pid
 *.eml
 /dist/
 .cache
+*.log
+*.sbt
+*.sbtserver
+*.lock
