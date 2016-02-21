@@ -17,7 +17,9 @@ public class ProductType {
     public ArrayList<Product> list = new ArrayList<>();
     
     public ProductType(String producName, NutritionalInformation info, float price) {
-
+		this.productName = producName;
+		this.nutritionalInfo = info;
+		this.price = price;
     }
 
     public boolean addProduct(Product product) {
