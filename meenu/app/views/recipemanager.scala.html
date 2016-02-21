@@ -1,5 +1,32 @@
-@(message: String)
-
 @main("Manage Recipes") {
-	<h1>@message</h1>
+	<div class="jumbotron">
+		<h2>Manage recipes</h2>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Recipe</th>
+					<th>Have all ingredients</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="/recipemanager/edit/1">Pasta Carbonara</a></td>
+					<td><span class="glyphicon glyphicon-minus"></span><span class="sr-only">Does not have all ingredients</span></td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete recipe</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="/recipemanager/edit/2">Pizza</a></td>
+					<td><span class="glyphicon glyphicon-ok"></span><span class="sr-only">Do have all ingredients</span></td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete recipe</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="/recipemanager/edit/3">Hamburger</a></td>
+					<td><span class="glyphicon glyphicon-ok"></span><span class="sr-only">Do have all ingredients</span></td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete recipe</span></a></td>
+				</tr>
+			</tbody>
+		</table>
+		<a href="/recipemanager/add" role="button" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span><span class="sr-only">Add recipe</span></a>
+	</div>
 }

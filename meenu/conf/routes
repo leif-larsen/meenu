@@ -4,7 +4,9 @@
 
 # Home page
 GET     /                           			controllers.Application.index()
+
 GET		/mealplanner							controllers.MealPlannerController.index()
+GET		/meal/:mealid							controllers.MealController.index(mealid: Long)
 
 GET		/productmanager							controllers.ProductManagerController.index()
 GET		/productmanager/producttype/:typeid		controllers.ProductManagerController.editProductType(typeid: Long)
@@ -12,8 +14,10 @@ GET		/productmanager/producttype/			controllers.ProductManagerController.addProd
 GET		/productmanager/product/:productid		controllers.ProductManagerController.editProduct(productid: Long)
 
 GET		/recipemanager							controllers.RecipeManagerController.index()
+GET		/recipemanager/add						controllers.RecipeManagerController.addRecipe()
+GET		/recipemanager/edit/:recipeid			controllers.RecipeManagerController.editRecipe(recipeid: Long)
+
 GET		/people									controllers.PeopleController.index()
-GET		/meal/:mealid							controllers.MealController.index(mealid: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
