@@ -1,5 +1,86 @@
 @(message: String)
 
 @main("Manage products") {
-	<h1>@message</h1>
+	<div class="jumbotron">
+		<h2>Manage product types</h2>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Product type</th>
+					<th># of products</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="/productmanager/producttype/1">Milk</a></td>
+					<td>2</td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product type</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="/productmanager/producttype/2">Meat</a></td>
+					<td>3</td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product type</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="/productmanager/producttype/3">Cheese</a></td>
+					<td>1</td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product type</span></a></td>
+				</tr>
+			</tbody>
+		</table>
+		<a href="/productmanager/producttype/" role="button" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span><span class="sr-only">Add product type</span></a>
+	</div>
+	
+	<div class="jumbotron">
+		<h2>Manage products</h2>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Product name</th>
+					<th>Type</th>
+					<th>Quantity</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="/productmanager/product/1">Tine Styrk</a></td>
+					<td>Milk</td>
+					<td>2 l</td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="/productmanager/product/2">Tine Helmelk</a></td>
+					<td>Milk</td>
+					<td>1 l</td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="/productmanager/product/3">Tenderloin</a></td>
+					<td>Meat</td>
+					<td>0.3 kg</td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="/productmanager/product/4">Chicken</a></td>
+					<td>Meat</td>
+					<td>1 kg</td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="/productmanager/product/5">T-bone steak</a></td>
+					<td>Meat</td>
+					<td>0.6 kg</td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product</span></a></td>
+				</tr>
+				<tr>
+					<td><a href="/productmanager/product/6">Jarlsberg</a></td>
+					<td>Cheese</td>
+					<td>0.7 kg</td>
+					<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product</span></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 }
