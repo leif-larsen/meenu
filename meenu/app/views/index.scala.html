@@ -3,11 +3,85 @@
 @main("Home") {
 	<div class="row">
 		<div class="col-md-8 col-xs-12">
-			<div class="jumbotron">
-				<h2>Upcoming Meals</h2>
+		
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
+					<li class="" data-slide-to="1" data-target="#carousel-example-generic"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="item active text-center">
+						<h2>Upcoming Meals</h2>
+						<table class="table table-striped">
+							<tbody>
+								<tr><td><a href="/meal/1">Meal 1</a></td></tr>
+								<tr><td><a href="/meal/2">Meal 2</a></td></tr>
+								<tr><td><a href="/meal/3">Meal 3</a></td></tr>
+								<tr><td><a href="/meal/4">Meal 4</a></td></tr>
+								<tr><td><a href="/meal/5">Meal 5</a></td></tr>
+							</tbody>
+						</table>
+						<br>
+					</div>
+					<div class="item text-center">
+						<h2>Suggested Meals</h2>
+						<table class="table table-striped">
+							<tbody>
+								<tr><td><a href="/meal/1">Suggested Meal 1</a></td></tr>
+								<tr><td><a href="/meal/2">Suggested Meal 2</a></td></tr>
+								<tr><td><a href="/meal/3">Suggested Meal 3</a></td></tr>
+								<tr><td><a href="/meal/4">Suggested Meal 4</a></td></tr>
+								<tr><td><a href="/meal/5">Suggested Meal 5</a></td></tr>
+							</tbody>
+						</table>
+						<br>
+					</div>
+				</div>
+				<a class="left carousel-control" data-slide="prev" role="button" href="#carousel-example-generic">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span">
+				</a>
+				<a class="right carousel-control" data-slide="next" role="button" href="#carousel-example-generic">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span">
+				</a>
 			</div>
+			
+			<br><br>
+			
 			<div class="jumbotron">
 				<h2>Shopping List</h2>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Product</th>
+							<th>Quantity</th>
+							<th>Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Milk</td>
+							<td>2</td>
+							<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product</span></a></td>
+						</tr>
+						<tr>
+							<td>Cheese</td>
+							<td>1</td>
+							<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product</span></a></td>
+						</tr>
+						<tr>
+							<td>Chicken</td>
+							<td>1</td>
+							<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product</span></a></td>
+						</tr>
+						<tr>
+							<td>Chocolate</td>
+							<td>200</td>
+							<td><a href="#"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Delete product</span></a></td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 		
