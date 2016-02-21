@@ -14,5 +14,9 @@ public class Application extends Controller {
 	public Result settings() {
 		return ok(settings.render("- Where all the fun can be changed"));
 	}
+	
+	public Result concept() {
+		return ok(concept.render());
+	}
 
 }
