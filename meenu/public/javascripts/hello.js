@@ -15,7 +15,9 @@ $(document).ready(function(){
 		$("#productmanager").addClass("active");		
 	} else if(pathname.indexOf("people") > -1) {
 		$("#people").addClass("active");		
-	} else {
+	} else if(pathname.indexOf("meal") > -1) {
+		$("#mealplanner").addClass("active");		
+	}  else {
 		$("#home").addClass("active");
 	}
 });
