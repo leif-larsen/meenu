@@ -18,6 +18,8 @@ GET		/recipemanager/add						controllers.RecipeManagerController.addRecipe()
 GET		/recipemanager/edit/:recipeid			controllers.RecipeManagerController.editRecipe(recipeid: Long)
 
 GET		/people									controllers.PeopleController.index()
+GET		/people/add								controllers.PeopleController.addPerson()
+GET		/people/edit/:personId					controllers.PeopleController.editPerson(personId: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
