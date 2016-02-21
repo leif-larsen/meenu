@@ -8,7 +8,7 @@ import views.html.*;
 public class RecipeManagerController extends Controller {
 
     public Result index() {
-        return ok(index.render("This is the page for recipe planning... :D:D"));
+        return ok(recipemanager.render("This is the page for recipe planning... :D:D"));
     }
 
 }

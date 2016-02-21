@@ -8,7 +8,7 @@ import views.html.*;
 public class ProductManagerController extends Controller {
 
     public Result index() {
-        return ok(index.render("This is the page for managing products... :D:D"));
+        return ok(productmanager.render("This is the page for managing products... :D:D"));
     }
 
 }
