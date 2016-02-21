@@ -17,6 +17,8 @@ $(document).ready(function(){
 		$("#people").addClass("active");		
 	} else if(pathname.indexOf("meal") > -1) {
 		$("#mealplanner").addClass("active");		
+	} else if(pathname.indexOf("settings") > -1) {
+		$("#settings").addClass("active");		
 	}  else {
 		$("#home").addClass("active");
 	}

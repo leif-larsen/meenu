@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                           			controllers.Application.index()
+GET 	/settings								controllers.Application.settings()
 
 GET		/mealplanner							controllers.MealPlannerController.index()
 GET		/meal/:mealid							controllers.MealController.index(mealid: Long)
