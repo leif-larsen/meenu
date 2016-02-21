@@ -8,20 +8,22 @@ import java.util.Date;
  */
 public class Product {
 
-    public ProductType type;
+    public ProductType prodtype;
     public Quantity quantity;
     public Date expirationDate;
     public String barCode;
+	public String productName;
 
     public Product(ProductType t, float amount, Date d) {
-        type = t;
-        quantity = new Quantity(type.measurementUnit, amount);
+        prodtype = t;
+        quantity = new Quantity(prodtype.measurementUnit, amount);
         expirationDate = d;
     }
 
-    public Product(ProductType t, float amount) {
-        type = t;
-        quantity = new Quantity(type.measurementUnit, amount);
+    public Product(ProductType t, float amount, String name) {
+        prodtype = t;
+        quantity = new Quantity(prodtype.measurementUnit, amount);
+		productName = name;
     }
 
     public Quantity getQuantity() {

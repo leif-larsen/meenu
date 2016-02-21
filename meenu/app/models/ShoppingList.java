@@ -18,7 +18,7 @@ public class ShoppingList {
         Product p = getProduct(pt);    //Get product from list
 
         if (p == null) {        //Create product if it doesn't exist
-            p = new Product(pt, a, null);
+            p = new Product(pt, a, "");
             productList.add(p);
         }
 
@@ -46,7 +46,7 @@ public class ShoppingList {
         }
 
         if (p == null) {
-            p = new Product(pt, a, null);
+            p = new Product(pt, a, "");
             productList.add(p);
         }
 
@@ -65,7 +65,7 @@ public class ShoppingList {
 
     public Product getProduct(ProductType pt) {
         for (Product p : productList) {
-            if (p.type == pt) {
+            if (p.prodtype == pt) {
                 return p;
             }
         }

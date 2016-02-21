@@ -33,11 +33,11 @@ public class MealPlanner {
         ArrayList<Product> tmp = new ArrayList<>();
         for (Product p : r.productList) {
 
-            float available = pi.getProductQuantity(p.type).getAmount();
+            float available = pi.getProductQuantity(p.prodtype).getAmount();
             float required = p.getQuantity().getAmount();
 
             if (required > available) {
-                tmp.add(new Product(p.type, required - available, null));
+                tmp.add(new Product(p.prodtype, required - available, "Tine Styrk"));
             }
         }
 
@@ -46,7 +46,7 @@ public class MealPlanner {
 
     boolean haveIngredients(Recipe r) {
         for (Product p : r.productList) {
-            float available = pi.getProductQuantity(p.type).getAmount();
+            float available = pi.getProductQuantity(p.prodtype).getAmount();
             float required = p.getQuantity().getAmount();
 
             if (required > available) {

@@ -3,16 +3,30 @@ package controllers;
 import play.*;
 import play.mvc.*;
 
+import meenu.logic.*;
+import meenu.models.*;
+import java.util.ArrayList;
 import views.html.*;
 
 public class ProductManagerController extends Controller {
 
+	private ProductInterface productInterface = new ProductInterface();
+	
     public Result index() {
-        return ok(productmanager.render("This is the page for managing products... :D:D"));
+		ArrayList<ProductType> productTypes = productInterface.getListOfProductType();
+		ArrayList<Product> products = new ArrayList<Product>();
+		
+		for(int i = 0; i < productTypes.size(); i++) {
+			for(int j = 0; j < productInterface.getListOfProducts(productTypes.get(i)).size(); j++) {
+				products.add(productInterface.getListOfProducts(productTypes.get(i)).get(j));				
+			}
+		}
+		
+        return ok(productmanager.render(productTypes, products));
     }
 	
-	public Result editProductType(Long typeId) {
-		return ok(producttypeedit.render(Long.toString(typeId)));
+	public Result editProductType(String typeId) {
+		return ok(producttypeedit.render(typeId));
 	}
 	
 	public Result addProductType() {

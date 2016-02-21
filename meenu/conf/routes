@@ -10,7 +10,7 @@ GET		/mealplanner							controllers.MealPlannerController.index()
 GET		/meal/:mealid							controllers.MealController.index(mealid: Long)
 
 GET		/productmanager							controllers.ProductManagerController.index()
-GET		/productmanager/producttype/:typeid		controllers.ProductManagerController.editProductType(typeid: Long)
+GET		/productmanager/producttype/:typeid		controllers.ProductManagerController.editProductType(typeid: String)
 GET		/productmanager/producttype/			controllers.ProductManagerController.addProductType()
 GET		/productmanager/product/:productid		controllers.ProductManagerController.editProduct(productid: Long)
 

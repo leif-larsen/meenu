@@ -15,8 +15,15 @@ public class ProductInterface {
 
     private ArrayList<ProductType> list = new ArrayList<>();
 
-    public boolean addProduct(ProductType type, float amount, Date expirationDate) {
-        Product p = new Product(type, amount, expirationDate);
+	public ProductInterface() {
+		addProduct(new ProductType("Milk", null, 1.65f), 2.0f, null, "Styrk");
+		addProduct(new ProductType("Meat", null, 2.50f), 0.5f, null, "T-Bone Steak");
+		addProduct(new ProductType("Cheese", null, 1.35f), 0.7f, null, "Jarlsberg");
+		addProduct(new ProductType("Chocolate", null, 0.90f), 1.0f, null, "Melkesjokolade");
+	}
+	
+    public boolean addProduct(ProductType type, float amount, Date expirationDate, String name) {
+        Product p = new Product(type, amount, name);
         if (!list.contains(type)) {
             list.add(type);
         }
@@ -24,7 +31,7 @@ public class ProductInterface {
     }
 
     public void removeProduct(Product p) {
-        p.type.removeProduct(p);
+        p.prodtype.removeProduct(p);
     }
 
     public void removeProductAmount(Product p, float amount) {
@@ -60,7 +67,7 @@ public class ProductInterface {
     }
 
     public void addProductType(String productName, NutritionalInformation info, float price) {
-        ProductType type = new ProductType(productName, info, price);
+        ProductType ptype = new ProductType(productName, info, price);
     }
 
     public Quantity getProductQuantity(ProductType a) {

@@ -37,12 +37,12 @@ public class ShopPlanner {
 
         for (Meal m : meals) {
             for (Product p : m.getIngredients()) {
-                tmp.addAmount(p.type, p.getQuantity().getAmount());
+                tmp.addAmount(p.prodtype, p.getQuantity().getAmount());
             }
         }
 
         for (Product p : staticItems.productList) {
-            tmp.addAmount(p.type, p.getQuantity().getAmount());
+            tmp.addAmount(p.prodtype, p.getQuantity().getAmount());
         }
 
         for (ProductType pt : productInterface.getListOfProductType()) {
