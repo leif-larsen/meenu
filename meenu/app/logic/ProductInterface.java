@@ -16,8 +16,10 @@ public class ProductInterface {
     private ArrayList<ProductType> list = new ArrayList<>();
 
 	public ProductInterface() {
-		addProduct(new ProductType("Milk", null, 1.65f), 2.0f, null, "Styrk");
-		addProduct(new ProductType("Milk", null, 1.70f), 1.5f, null, "Whole Fat");
+		ProductType milk = new ProductType("Milk", null, 1.65.f, null);
+		addProduct(milk, 2.0f, null, "Styrk");
+		milk.price = 1.70f;
+		addProduct(milk, 1.5f, null, "Whole Fat");
 		addProduct(new ProductType("Meat", null, 2.50f), 0.5f, null, "T-Bone Steak");
 		addProduct(new ProductType("Cheese", null, 1.35f), 0.7f, null, "Jarlsberg");
 		addProduct(new ProductType("Chocolate", null, 0.90f), 1.0f, null, "Melkesjokolade");
