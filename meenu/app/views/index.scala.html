@@ -1,5 +1,23 @@
 @(message: String)
 
-@main("Meenu") {
-	<h1>@message</h1>
+@main("Home") {
+	<div class="row">
+		<div class="col-md-8 col-xs-12">
+			<div class="jumbotron">
+				<h2>Upcoming Meals</h2>
+			</div>
+			<div class="jumbotron">
+				<h2>Shopping List</h2>
+			</div>
+		</div>
+		
+		<div class="col-md-4 col-xs-6">
+			<div class="button-group-vertical" role="group">
+				<button class="btn btn-lg btn-default btn-block" type="button">Plan meals</button>
+				<button class="btn btn-lg btn-default btn-block" type="button">Manage products</button>
+				<button class="btn btn-lg btn-default btn-block" type="button">Manage recipes</button>
+				<button class="btn btn-lg btn-default btn-block" type="button">Manage people</button>
+			</div>
+		</div>
+	</div>
 }
